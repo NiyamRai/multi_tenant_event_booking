@@ -1,0 +1,186 @@
+/* styles/blog.css */
+.blog-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000000cc;
+  margin: 0 auto;
+}
+/* Basic HTML headings without extra styling */
+.blog-page-h1 {
+  color: #0288d1;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.blog-page h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.blog-page h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Paragraphs and links */
+.blog-page p {
+  margin-bottom: 1rem;
+}
+.blog-page li > p {
+  margin-bottom: 0.25rem;
+}
+.blog-page li > strong {
+  margin-top: 1rem;
+}
+
+.blog-page a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.blog-page a:hover {
+  text-decoration: underline;
+}
+
+/* Image styles */
+.blog-page img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
+}
+
+/* Blockquote styles */
+.blog-page blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin-left: 0;
+  font-style: italic;
+}
+
+/* List styles */
+.blog-page ul {
+  margin-left: 20px;
+  list-style-type: disc; /* Displays a disc for unordered lists */
+}
+.blog-page ul ul {
+  margin-left: 20px;
+  margin-bottom: 1rem;
+  list-style-type: circle; /* Displays a disc for unordered lists */
+}
+
+.blog-page li ul {
+  margin-left: 20px;
+  margin-bottom: 1rem;
+  /* Displays a disc for unordered lists */
+}
+
+.blog-page ol {
+  margin-left: 20px;
+  list-style-type: decimal; /* Displays numbers for ordered lists */
+}
+
+/* Make the ol numbers bold if the li contains a strong tag */
+ol li:has(strong) {
+  font-weight: bold;
+}
+
+/* Ensure only <strong> elements remain bold, and other text stays normal */
+ol li:has(strong) p,
+ol li:has(strong) p *:not(strong) {
+  font-weight: normal;
+}
+
+/* Add vertical margin if <p> contains only a <strong> */
+ol li p:has(> strong:only-child) {
+  margin: 10px 0; /* Adjust as needed */
+}
+
+/* styles/blog.css */
+@media screen and (max-width: 768px) {
+  /* Blog page styles for smaller screens */
+  .blog-page {
+    padding: 0 10px;
+    font-size: 14px; /* Smaller font size for better readability */
+  }
+
+  /* Blog heading styles */
+  .blog-page-h1 {
+    font-size: 26px; /* Smaller heading size */
+    margin-bottom: 12px;
+  }
+
+  .blog-page h2 {
+    font-size: 20px; /* Smaller subheading size */
+    margin-top: 2rem;
+  }
+
+  .blog-page h3 {
+    font-size: 22px; /* Smaller subheading size */
+    margin-bottom: 4px;
+  }
+
+  /* Paragraph and list styles */
+  .blog-page p {
+    font-size: 15px; /* Adjust paragraph text for smaller screens */
+    margin-bottom: 0.75rem;
+    margin-top:20px;
+  }
+
+  .blog-page li > p {
+    margin-bottom: 0.2rem;
+  }
+
+  /* Link styling */
+  .blog-page a {
+    font-size: 14px; /* Smaller links */
+  }
+
+  /* Image styles */
+  .blog-page img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Blockquote styles */
+  .blog-page blockquote {
+    font-size: 14px; /* Smaller blockquote font */
+    padding-left: 12px; /* Reduced padding */
+  }
+
+  /* List styles */
+  .blog-page ul,
+  .blog-page ol {
+    font-size: 14px; /* Smaller font size for lists */
+    margin-left: 10px;
+  }
+
+  .blog-page ul ul {
+    list-style-type: circle; /* Maintain circle style */
+  }
+
+  .blog-page ol {
+    list-style-type: decimal; /* Maintain decimal style */
+  }
+
+  /* Adjust ordered list item with strong tags */
+  ol li:has(strong) {
+    font-weight: normal; /* Reduce boldness for smaller screens */
+  }
+
+  /* Ensure only <strong> elements remain bold, and other text stays normal */
+  ol li:has(strong) p,
+  ol li:has(strong) p *:not(strong) {
+    font-weight: normal;
+  }
+
+  /* Add vertical margin if <p> contains only a <strong> */
+  ol li p:has(> strong:only-child) {
+    margin: 8px 0; /* Adjust margin for smaller screens */
+  }
+}

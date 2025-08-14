@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes ribbonScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ribbon-scroll {
+    animation: ribbonScroll 40s linear infinite;
+  }
+}
+
+.navbar {
+  background: linear-gradient(
+    0deg,
+    #083a7f 0%,
+    #0a4597 28.5%,
+    #0e69e5 68.81%,
+    #09408d 99.99%,
+    #2476e7 100%
+  );
+}
