@@ -22,11 +22,14 @@ export default function Page() {
       </button>
 
       <div className="bg-neutral-400 p-5 flex-col items-center justify-center">
-        {auth.isAuthenticated + auth?.user?.role}
+        {auth.isAuthenticated + (auth?.user?.role || "")}
         <button
           className="p-4 bg-blue-500 text-white"
           onClick={() =>
             authAction.login({
+              id: 3,
+              name: "string",
+              email: "string",
               accessToken:
                 "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzdHJpbmdAc3RyaW5nLmNvbSIsImlhdCI6MTc0NTgyMzU5NCwiZXhwIjoxNzQ2NDI4Mzk0fQ.O9Sb_qdo6W-iopn_Vie0_DhVd8u8UX1l0H7zUTfhuDcCoMuL_AJTODma0I24VBAZ",
               tokenType: "Bearer",

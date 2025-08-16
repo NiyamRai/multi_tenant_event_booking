@@ -27,3 +27,79 @@
     #2476e7 100%
   );
 }
+
+:root {
+  /* Brand Primary (Purple-Red Gradient Inspired) */
+  --brand-primary-50: #f5f3ff;
+  --brand-primary-100: #ede9fe;
+  --brand-primary-200: #ddd6fe;
+  --brand-primary-300: #c4b5fd;
+  --brand-primary-400: #a78bfa;
+  --brand-primary-500: #8b5cf6;
+  --brand-primary-600: #7c3aed;
+  --brand-primary-700: #6d28d9;
+  --brand-primary-800: #5b21b6;
+  --brand-primary-900: #4c1d95;
+
+  /* Brand Secondary (Golden tones) */
+  --brand-secondary-50: #fffbeb;
+  --brand-secondary-100: #fef3c7;
+  --brand-secondary-200: #fde68a;
+  --brand-secondary-300: #fcd34d;
+  --brand-secondary-400: #fbbf24;
+  --brand-secondary-500: #f59e0b;
+  --brand-secondary-600: #d97706;
+  --brand-secondary-700: #b45309;
+  --brand-secondary-800: #92400e;
+  --brand-secondary-900: #78350f;
+
+  /* Brand Items (Reddish tones) */
+  --brand-items-50: #fef2f2;
+  --brand-items-100: #fee2e2;
+  --brand-items-200: #fecaca;
+  --brand-items-300: #fca5a5;
+  --brand-items-400: #f87171;
+  --brand-items-500: #ef4444;
+  --brand-items-600: #dc2626;
+  --brand-items-700: #b91c1c;
+  --brand-items-800: #991b1b;
+  --brand-items-900: #7f1d1d;
+
+  background-color: var(--brand-primary-200);
+}
+
+/* Dark Mode */
+.dark {
+  --brand-primary-50: #2e1065;
+  --brand-primary-100: #3b0764;
+  --brand-primary-200: #4c1d95;
+  --brand-primary-300: #5b21b6;
+  --brand-primary-400: #6d28d9;
+  --brand-primary-500: #7c3aed;
+  --brand-primary-600: #8b5cf6;
+  --brand-primary-700: #a78bfa;
+  --brand-primary-800: #c4b5fd;
+  --brand-primary-900: #ddd6fe;
+
+  --brand-secondary-50: #78350f;
+  --brand-secondary-100: #92400e;
+  --brand-secondary-200: #b45309;
+  --brand-secondary-300: #d97706;
+  --brand-secondary-400: #f59e0b;
+  --brand-secondary-500: #fbbf24;
+  --brand-secondary-600: #fcd34d;
+  --brand-secondary-700: #fde68a;
+  --brand-secondary-800: #fef3c7;
+  --brand-secondary-900: #fffbeb;
+
+  --brand-items-50: #7f1d1d;
+  --brand-items-100: #991b1b;
+  --brand-items-200: #b91c1c;
+  --brand-items-300: #dc2626;
+  --brand-items-400: #ef4444;
+  --brand-items-500: #f87171;
+  --brand-items-600: #fca5a5;
+  --brand-items-700: #fecaca;
+  --brand-items-800: #fee2e2;
+  --brand-items-900: #fef2f2;
+}

@@ -3,20 +3,10 @@ import { useAuthStore } from "@/store";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
-export default function page() {
+export default function Page() {
   const auth = useAuthStore((state) => state);
   const router = useRouter();
-  const handleLogin = () => {
-    const resp = {
-      accessToken:
-        "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzdHJpbmdAc3RyaW5nLmNvbSIsImlhdCI6MTc0NTgyMzU5NCwiZXhwIjoxNzQ2NDI4Mzk0fQ.O9Sb_qdo6W-iopn_Vie0_DhVd8u8UX1l0H7zUTfhuDcCoMuL_AJTODma0I24VBAZ",
-      tokenType: "Bearer",
-      role: "ROLE_ADMIN",
-      userId: "3",
-      permissions: ["can_fetch_gallery", "can_create_gallery"],
-    };
-    auth.login(resp);
-  };
+  const handleLogin = () => {};
   useEffect(() => {
     if (auth.isAuthenticated) {
       router.push("/admin");

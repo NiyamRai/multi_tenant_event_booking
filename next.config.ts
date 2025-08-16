@@ -3,11 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["imagen.io",
+    domains: [
+      "imagen.io",
       "empedance.sgp1.cdn.digitaloceanspaces.com",
-      "clapurban.blr1.digitaloceanspaces.com"
+      "clapurban.blr1.digitaloceanspaces.com",
+      "empedance.sgp1.digitaloceanspaces.com",
     ],
-    
   },
 };
 
