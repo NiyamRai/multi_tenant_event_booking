@@ -12,31 +12,41 @@ const companyData = [
     name: "none",
     logo: "/images/logo.png",
     logoColor: "black",
-    isPaid: false,
     description: "No Company Found",
+    options: [
+      { name: "Gold", price: 1000 },
+      { name: "Platinum", price: 2000 },
+      { name: "Diamond", price: 3000 },
+    ],
   },
-
   {
     name: "StarlineEvents",
     logo: "https://empedance.sgp1.digitaloceanspaces.com/testing/1755361456274_blob",
     logoColor: "#F97316",
-    isPaid: true,
     description:
       "We specialize in corporate events, weddings, and cultural programs.",
+    options: [
+      { name: "Gold", price: 1000 },
+      { name: "Platinum", price: 2000 },
+      { name: "Diamond", price: 3000 },
+    ],
   },
   {
     name: "BlueMoonProductions",
     logo: "https://empedance.sgp1.digitaloceanspaces.com/testing/1755361512312_favicon.svg",
     logoColor: "#3B82F6",
-    isPaid: false,
     description:
       "Your partner for music festivals, concerts, and entertainment shows.",
+    options: [
+      { name: "Gold", price: 1000 },
+      { name: "Platinum", price: 2000 },
+      { name: "Diamond", price: 3000 },
+    ],
   },
   {
     name: "Elite Gatherings",
     logo: "https://empedance.sgp1.digitaloceanspaces.com/testing/1755361572364_logoblack.svg",
     logoColor: "#10B981",
-    isPaid: false,
     description:
       "From intimate parties to grand galas, we create unforgettable experiences.",
   },
@@ -57,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: company.name,
+    title: "Register - " + company.name,
     description: company.description,
     icons: {
       icon: [{ url: company.logo, type: "image/png" }],
@@ -82,10 +92,10 @@ export default async function EventDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-bg text-fg px-6 py-10">
+    <div className="w-full flex flex-col items-center justify-center  text-fg px-6 min-h-screen ">
       {/* Card */}
       <div
-        className="w-full max-w-lg rounded-2xl shadow-lg p-8 text-center"
+        className="w-full  rounded-2xl shadow-lg p-8 text-center"
         style={{
           background: `linear-gradient(135deg, ${company.logoColor} 0%, var(--accent) 100%)`,
         }}>
@@ -105,17 +115,17 @@ export default async function EventDetailPage({ params }: Props) {
 
         {/* Description */}
         <p className="text-muted mb-6">{company.description}</p>
-
-        {/* Booking Button */}
-        <Link
-          href={`/event/${company.name}/register${
-            company.isPaid ? "" : "/form"
-          }`}
-          replace
-          className="px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:scale-105 transition"
-          style={{ backgroundColor: company.logoColor }}>
-          Book Now
-        </Link>
+      </div>
+      <div className="mt-4  flex flex-wrap gap-4 w-full">
+        {company?.options?.map((option, index) => (
+          <Link
+            href={`/event/${eventName}/register/${option.name}`}
+            key={index}
+            className="p-4 border-b px-5 rounded-10 bg-white border cursor-pointer transition-all ease-in-out hover:shadow-lg active:scale-95">
+            <h3 className="text-lg font-semibold mb-2">{option.name}</h3>
+            <p className="text-muted">Price: ${option.price}</p>
+          </Link>
+        ))}
       </div>
     </div>
   );
