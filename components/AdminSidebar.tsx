@@ -1,16 +1,15 @@
 "use client";
-
+import { AiFillHome } from "react-icons/ai";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 export const navItems = [
-  { name: "Home", icon: "", navLink: "/admin" },
-  { name: "About Us", icon: "", navLink: "/admin/about-us" },
-  { name: "Gallery", icon: "", navLink: "/admin/gallery" },
-  { name: "Management", icon: "", navLink: "/admin/management" },
-  { name: "News & Events", icon: "", navLink: "/admin/news-n-events" },
-  { name: "Contact us", icon: "", navLink: "/admin/contact-us" },
+  { name: "Home", icon: <AiFillHome />, navLink: "/client" },
+  { name: "About Us", icon: "", navLink: "/client/about-us" },
+  { name: "Gallery", icon: "", navLink: "/client/gallery" },
+  { name: "Management", icon: "", navLink: "/client/management" },
+  { name: "News & Events", icon: "", navLink: "/client/news-n-events" },
+  { name: "Contact us", icon: "", navLink: "/client/contact-us" },
 ];
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -21,6 +20,7 @@ export default function AdminSidebar() {
       <img
         src={"/images/logo.png"}
         alt="travel blog"
+        width={150}
         className=" mb-10 drop-shadow"
       />
 
@@ -36,23 +36,11 @@ export default function AdminSidebar() {
               className={`flex items-center gap-3 p-3 rounded-md transition text-sm font-medium ${
                 isActive
                   ? "bg-blue-100 border-l-4 border-blue-500 text-blue-700"
-                  : "hover:bg-gray-100"
+                  : "hover:bg-gray-100 text-gray-600 "
               }`}>
               <div className="w-6 text-center">
                 {item.icon ? (
-                  typeof item.icon === "string" ? (
-                    <span className={isActive ? "" : "text-gray-400"}>
-                      {item.icon}
-                    </span>
-                  ) : (
-                    <Image
-                      src={item.icon}
-                      alt="icon"
-                      width={16}
-                      height={16}
-                      className="inline-block"
-                    />
-                  )
+                  <span>{item.icon}</span>
                 ) : (
                   <span className="text-gray-400">{index + 1}</span>
                 )}

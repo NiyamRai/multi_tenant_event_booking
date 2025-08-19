@@ -6,7 +6,7 @@ import "@/style/blog.css";
 import AdminSidebar from "@/components/AdminSidebar";
 import AdminNavbar from "@/components/AdminNavbar";
 import AdminFooter from "@/components/AdminFooter";
-import ProtectedRoute from "./admin/ProtectedRoute";
+import ProtectedRoute from "./client/ProtectedRoute";
 
 const lato = Lato({
   subsets: ["latin"],

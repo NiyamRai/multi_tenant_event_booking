@@ -20,9 +20,9 @@ export default function ProtectedRoute({ children }: Props) {
   useEffect(() => {
     if (!isMounted) return;
 
-    if (!auth?.isAuthenticated) {
-      router.push("/login");
-    }
+    // if (!auth?.isAuthenticated) {
+    //   router.push("/login");
+    // }
   }, [isMounted, auth?.isAuthenticated, router]);
 
   if (!isMounted || !auth?.isAuthenticated) {
