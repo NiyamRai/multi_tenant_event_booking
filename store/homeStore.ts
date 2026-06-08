@@ -5,6 +5,7 @@ import { persist } from "zustand/middleware";
 import { createSessionStorage } from "@/utils/manageStorage";
 import { fetchHomeData } from "@/utils/api/homeApi";
 import { HomeApiResponseData } from "@/utils/types/home";
+import { getApiErrorMessage } from "@/utils/api/apiClient";
 
 interface HomeState {
   homeData: HomeApiResponseData | null;
@@ -28,7 +29,7 @@ export const useHomeStore = create<HomeState>()(
         if (res.status === 1) {
           set({ homeData: res.data, loading: false });
         } else {
-          set({ error: res.error || "Failed to fetch", loading: false });
+          set({ error: getApiErrorMessage(res.error, "Failed to fetch"), loading: false });
         }
       },
     }),

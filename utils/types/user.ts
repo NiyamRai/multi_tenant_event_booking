@@ -6,5 +6,6 @@ export interface User {
   tokenType?: string;
   role?: string;
   userId?: string;
+  tenantId?: string;
   permissions?: string[];
 }

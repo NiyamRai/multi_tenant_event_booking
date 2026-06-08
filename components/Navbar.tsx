@@ -24,7 +24,10 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  const navOptions = [{ name: "Home", link: "/" }];
+  const navOptions = [
+    { name: "Home", link: "/" },
+    { name: "Events", link: "/events_near_by" },
+  ];
 
   return (
     <nav className="w-full   fixed top-0 left-0 z-20">

@@ -13,8 +13,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Travel Blog",
-  description: "A thought which travels",
+  title: "Box-Awfis",
+  description: "Discover nearby events, book tickets, and download QR passes.",
 };
 
 export default function RootLayout({
